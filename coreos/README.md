@@ -14,9 +14,9 @@ It may contain bugs and may lack handling of certain situations and incidents. I
 the concepts rather than provide a bullet-proof solution.
 
 
-## what is podman (as compared to 'docker')? 
+## what is podman (in contract to 'docker')? 
 
-There are plenty of much better and more comprehensive articles out there which explain who has initiated podman as a docker drop-in replacement and why -
+There are plenty of much better - and more comprehensive - articles out there which explain WHO has initiated podman as a docker drop-in replacement - and WHY -
 for the purpose of this community contribution, I would like to highlight first the *common ground* that both docker and podman both use container runtime
 libraries based on the OCI standard - this provides a huge level of compatibilities between both options.
 

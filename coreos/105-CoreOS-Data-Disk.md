@@ -34,7 +34,7 @@ e.g. with
 
 `sudo echo '/dev/sdb1 /var/disk1 ext4 defaults 0 0' >> /etc/fstab`
 
-or your favorite text editor (e.g. vi, vim, nano)
+or your favorite text editor (e.g. vi, vim, nano). Using `/etc/fstab` seems to be a bit old-fashioned in the systemd age, but it is actually systemd which looks into the file to figure out if there is anything that need to be mounted.
 
 **test mount**
 

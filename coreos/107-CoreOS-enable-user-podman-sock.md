@@ -16,6 +16,22 @@ to kubernetes and are very useful in use-cases in which
 an application like gICS or keycloak need a database to run - pods have an *internal* network in which any2any port can communicate 
 * when a user logs off all containers will stop - use "loginctl enable-linger username" to avoid this and allow containers to continue running
 
-## how to use (user) podman.sock ?
+
+## how to use (user) podman.socket ?
+
+To allow communication between containers docker is using a socket - however, root privileges are required.
+
+In contrast, podman can run rootless containers and does not offer such a socket at all. If it is really needed a socket can be activated on user-level - which permit this non-root user to access the socket without any elevated privileges.
+
+`systemctl --user enable --now podman.socket`
+
+
+Please note the option to create a *system wide* socket is also available
+
+`systemctl enable --now podman.socket`
+
+however we are *NOT* make use of it (and so avoid all elevated permissions issues).
+
+
 
 ...
